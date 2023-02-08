@@ -10,8 +10,8 @@
 </head>
 
 <body>
-
-    <div id="app"></div>
+    <!--  english  -->
+    <!-- <div id="app"></div>
     <div id="image">
         <img v-bind:src="picture" alt="" :class="gender" class="ml-auto mr-auto d-block mb-2 mt-2">
         <h4>Name: {{ name }}</h4>
@@ -19,14 +19,77 @@
         <center>
             <button v-on:click="getUser()"  class="btn btn-primary">Click Here</button>
         </center>
-    </div>
-    
+    </div> -->
 
-    <!-- 
-        <div></div>
-        <p></p>
-        <h1></h1> 
-    -->
+    <!------------------------------------------------------------>
+    <!------------------------------------------------------------>
+
+
+    <!--------------- bangla-1:  v-text and v-html -------------->
+    <!-- <div id="app">
+        <h3 v-text="name" class="text-left mt-3 ml-3"></h3>
+        <h3 v-html="name"></h3>
+    </div> -->
+
+    <!-------------- bangla-2:  using if condition ------------->
+    <!-- <div id="app" class="mt-4 text-center">
+        <h3 v-if="age > maxAge"> maximum age is: {{ age }} , maxage is: {{ maxAge }}</h3>
+        <h3 v-else-if="age < maxAge"> miniimum age is: {{ age }}, maxage is: {{ maxAge }} </h3>
+        <h3 v-else-if="age == maxAge">  Age is: {{ age }}, maxage is: {{ maxAge }} </h3>
+        <h3 v-else> You are not allowed </h3>
+    </div> -->
+    <!-- <div id="app" class="mt-4 text-center">
+        <h3 v-if="user()"> maximum age is: {{ age }} , maxage is: {{ maxAge }}</h3>
+      
+        <h3 v-else> You are not allowed </h3>
+    </div> -->
+
+    <!-------------- bangla-3: array -------------->
+    <!-- <div id="app" class="mt-4 text-center">
+        <div v-for="(car, key) in cars">
+            <h4>{{ key+1 }} : {{ car }}</h4>
+        </div>
+    </div> -->
+
+    <!-------------- bangla-4: v-once -------------->
+    <!-- <div id="app" class="mt-4 text-center">
+        <h1 v-once>{{ name }}</h1>
+
+        <h1 class="text-danger">{{ name }}</h1>
+        {{ update() }}
+    </div> -->
+
+    <!-------------- bangla-5: adding event in button -------------->
+    <!-- <div id="app" class="text-center mt-4">
+       <h1> {{ name }} </h1>
+       <button @click="changeName('tohin')"> click</button>
+    </div> -->
+
+    <!-------------- bangla-6: prevent page reload -------------->
+    <!-- <div id="app" class="m-4">
+      <form v-on:submit.prevent = "submitForm">
+        <input type="text">
+        <button type="submit">Submit</button>
+      </form>
+    </div> -->
+
+    <!-------------- bangla-7: form submit -> v-model -------------->
+    <div id="app" class="m-4">
+        <form @submit.prevent="submitForm">
+
+            <label>first name</label>
+            <input type="text" v-model="formData.firstName">
+            <hr>
+
+            <label>last name</label>
+            <input type="text" v-model="formData.lastName">
+            <hr>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+
+
 
     <script src="https://unpkg.com/vue@3.0.5"></script>
     <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->

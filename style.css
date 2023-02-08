@@ -1,8 +1,10 @@
 .male{
-    border:5px solid red;
+    border:2px solid red;
+    border-radius: 15px;
 }
 .female{
-    border:5px solid pink;
+    border:2px solid pink;
+    border-radius: 15px;
 }
 #image{
     text-align: center;
